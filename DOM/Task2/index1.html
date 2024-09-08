@@ -1,0 +1,26 @@
+<!--Another way-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="add" onclick="addhello()">Add Hello</button>
+    <div id="container">
+
+    </div>
+</body>
+<script>
+    var container = document.getElementById("container")
+    function addhello() {
+        var newelement = document.createElement("h1")
+        newelement.textContent = "Hello"
+        container.append(newelement)
+    }
+</script>
+
+</html>

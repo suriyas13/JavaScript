@@ -1,0 +1,26 @@
+<!--How can I make it so that when a user clicks a button, the text from
+that button is shown in the hl tag located above it?-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="result">Name</h1>
+    <button id="one" onclick="displayed(this)">Suriya</button>
+    <button id="two" onclick="displayed(this)">Chandraj</button>
+    <button id="three" onclick="displayed(this)">Tushar</button>
+</body>
+<script>
+    var result = document.getElementById("result")
+    function displayed(button) {
+        console.log(button.id)
+        result.textContent = button.textContent
+    }
+</script>
+
+</html>

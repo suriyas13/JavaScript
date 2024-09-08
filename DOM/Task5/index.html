@@ -1,0 +1,30 @@
+<!--Removing element-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 onclick="deleted(event)">One</h1>
+    <h1 onclick="deleted(event)">Two</h1>
+    <h1 onclick="deleted(event)">Three</h1>
+    <h1 onclick="deleted(event)">Four</h1>
+    <h1 onclick="deleted(event)">Five</h1>
+    <h1 onclick="deleted(event)">Six</h1>
+</body>
+<script>
+    function deleted(event) {
+        event.target.remove()
+    }
+</script>
+
+</html>

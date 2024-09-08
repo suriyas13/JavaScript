@@ -1,0 +1,23 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="one">Hello World</p>
+    <button id="btn" onclick="change()">Change</button>
+</body>
+<script>
+    function change() {
+        var one = document.getElementById("one")
+        btn = document.getElementById("btn")
+        console.log(one.textContent)
+        one.textContent = "Bye World"
+        btn.textContent = "Changed"
+    }
+</script>
+
+</html>

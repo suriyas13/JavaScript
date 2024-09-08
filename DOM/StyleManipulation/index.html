@@ -1,0 +1,42 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            background-color: black;
+            width: 200px;
+            height: 200px;
+            transition: 2s;
+        }
+
+        .maxwidth {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="one"></div>
+    <button id="btn" onclick="change()">Change Color</button>
+</body>
+<script>
+    var one = document.getElementById("one")
+    var btn = document.getElementById("btn")
+    function change() {
+        one.style.backgroundColor = "green"
+        one.setAttribute("class", "maxwidth") // add maxwidth class to div id one
+        btn.setAttribute("onclick", "changed()")
+        btn.textContent = "Back to same Color"
+    }
+    function changed() {
+        one.style.backgroundColor = "black"
+        one.removeAttribute("class", "maxwidth")
+        btn.setAttribute("onclick", "change()")
+        btn.textContent = "Change Color"
+    }
+</script>
+
+</html>

@@ -1,0 +1,37 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Guess the number from 1 to 10</h2>
+    <input type="number" id="t1" value="">
+    <button onclick="check()">Check</button>
+    <p id="answer"></p>
+    <p id="score"></p>
+</body>
+<script>
+    var t1 = document.getElementById("t1")
+    var answer = document.getElementById("answer")
+    var score = document.getElementById("score")
+    var s = 10;
+    function check() {
+        var a = Math.random()
+        if (t1.value == Math.floor(Math.random() * 10) + 1) {
+            alert("You Won!")
+        } else {
+            if (s != 0) {
+                answer.textContent = "You are wrong!"
+                s = s - 1;
+                score.textContent = "Your Score:" + s
+            } else {
+                alert("You lose!Your score is 0")
+            }
+        }
+    }
+</script>
+
+</html>

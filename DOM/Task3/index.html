@@ -1,0 +1,36 @@
+<!--How can I create an HTML button that, when clicked, triggers a
+JavaScript function, and changes the button's color to red with each
+successive click?-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .change {
+            background-color: red;
+            width: 200px;
+            height: 200px;
+            transition: all 2s;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn" onclick="add()">Change Color</button>
+</body>
+<script>
+    var btn = document.getElementById("btn")
+    function add() {
+        btn.classList.add("change");//add class to button
+        btn.setAttribute("onclick", "remove()")
+    }
+    function remove() {
+        btn.classList.remove("change");
+        btn.setAttribute("onclick", "add()")
+    }
+</script>
+
+</html>

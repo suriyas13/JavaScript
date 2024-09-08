@@ -1,0 +1,27 @@
+<!--• Create an input tag with the id t1."
+• Create an hl tag with the id "result."
+Your task is to:
+• Retrieve the value from the t1.
+• Insert this value into the hl tag using the "textcontent" property.
+• Use an "onkeyup" event handler to accomplish this.-->
+<!DOCTYPE html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="t1" value="" onkeyup="update()">
+    <h1 id="result"></h1>
+</body>
+<script>
+    var t1 = document.getElementById("t1")
+    var result = document.getElementById("result")
+    function update() {
+        result.textContent = t1.value
+    }
+</script>
+
+</html>
